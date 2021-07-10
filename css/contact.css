@@ -152,8 +152,7 @@ body {
   transition: color 0.3s ease;
 }
 
-
-.navigation__link:active {
+.site-header__nav-link:active {
   opacity: 0.7;
 }
 
@@ -427,7 +426,7 @@ body {
     max-width: 615px;
   }
 
-  .site-hero__content {
+  .site-contact__content {
     display: flex;
     justify-content: space-between;
   }
