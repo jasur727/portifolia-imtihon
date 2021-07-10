@@ -1,0 +1,668 @@
+@font-face {
+  font-family: 'Ibarra Real Nova';
+  src: url('../fonts/IbarraRealNova-Bold.woff2') format('woff2'),
+    url('../fonts/IbarraRealNova-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('../fonts/PublicSans-Regular.woff2') format('woff2'),
+    url('../fonts/PublicSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('../fonts/PublicSans-Bold.woff2') format('woff2'),
+    url('../fonts/PublicSans-Bold.woff2') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Ibarra Real Nova', sans-serif;
+  font-family: 'Public Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 42px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1160px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* HEADER */
+
+.site-header {
+  position: relative;
+  z-index: 1;
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+.site-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header__logo-link:hover {
+  opacity: 0.8;
+}
+
+.site-header__logo-link:active {
+  opacity: 0.5;
+}
+
+.site-header__logo-link {
+  display: block;
+}
+
+.site-header__nav {
+  position: absolute;
+  z-index: 1;
+  overflow: auto;
+  top: calc(100% - 15px);
+  right: 0;
+  display: none;
+  padding: 40px 63px;
+  background-color: rgba(51, 50, 61, 1);
+}
+
+.header-open .site-header__nav {
+  display: block;
+}
+
+.site-header__button {
+  width: 24px;
+  height: 15px;
+  background-color: transparent;
+  border: none;
+  background-image: url('../img/gamburger.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.header-open .site-header__button {
+  background-image: url('../img/x-button.svg');
+}
+
+.site-header__nav-link {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header__nav-item {
+  list-style: none;
+  text-align: center;
+}
+
+.site-header__nav-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.site-header__nav-link {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.site-header__nav-link:hover {
+  color: var(--link-hovered);
+}
+
+.site-header__nav-link:active {
+  opacity: 0.7;
+}
+
+/* hero */
+
+.site-hero__content::before {
+  content: '';
+  display: block;
+  width: 311px;
+  height: 271px;
+  background-image: url("../img/kampyter-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.site-hero__content-title {
+  margin: 0;
+  min-width: 311px;
+  font-family: 'Ibarra Real Nova',
+    sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: -0.357143px;
+  color: #33323D;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.site-hero__item {
+  max-width: 200px;
+  display: flex;
+  background-color: #203A4C;
+  white-space: nowrap;
+  padding: 0 24px;
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+.site-hero__item:hover {
+  background-color: #5FB4A2;
+}
+
+.site-hero__item-button {
+  background-color: transparent;
+  border: none;
+}
+
+.site-hero__item-link {
+  text-decoration: none;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-left: 36px;
+}
+
+/* ABOUT */
+
+.about {
+  margin-top: 96px;
+}
+
+.about-content::before {
+  content: '';
+  display: block;
+  width: 311px;
+  height: 246px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/people-mobile.png");
+}
+
+.about-content__list::after {
+  content: '';
+  display: block;
+  width: 311px;
+  height: 1px;
+  background-color: #33323D;
+  opacity: 0.15;
+  margin-bottom: 50px;
+  margin-top: 51px;
+}
+
+.about-content__list-title {
+  margin: 0;
+  font-family: 'Ibarra Real Nova', sans-serif;
+  letter-spacing: -0.357143px;
+  color: #33323D;
+  margin-bottom: 28px;
+}
+
+.about-content__list-title::before {
+  content: '';
+  display: block;
+  width: 311px;
+  height: 1px;
+  background: #33323D;
+  opacity: 0.15;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.about-content__list-text {
+  margin: 0;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #33323D;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
+
+.about-content__list-link {
+  display: inline-block;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #33323D;
+  border: 1px solid #33323D;
+  padding: 17px 35px;
+  transition: all 0.5s ease;
+}
+
+.about-content__list-link:hover {
+  background-color: #33323D;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+/* FEATURES */
+
+.features {
+  padding: 0 32px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.features-content__title {
+  margin: 0;
+  font-family: 'Ibarra Real Nova', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: -0.357143px;
+  color: #33323D;
+  margin-bottom: 40px;
+}
+
+.features-content__link {
+  text-decoration: none;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #33323D;
+  border: 1px solid #33323D;
+  padding: 17px 34px;
+  transition: all 0.5s ease;
+}
+
+.features-content__link:hover{
+  background-color: #33323D;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+/* FOOTER */
+
+.site-footer {
+  background-color: rgba(51, 50, 61, 1);
+}
+
+.site-footer__nav {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.site-footer__nav-item {
+  list-style: none;
+}
+
+.site-footer__nav-link {
+  text-decoration: none;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition: color 0.5s ease;
+}
+
+.site-footer__nav-link:hover{
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+}
+
+/* .site-footer */
+
+.site-footer__content {
+  padding: 56px 0;
+}
+
+.site-footer__content-img {
+  margin-bottom: 40px;
+}
+
+.site-footer__content {
+  text-align: center;
+}
+
+.site-footer__bottom {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.site-footer__bottom-item {
+  list-style: none;
+}
+
+.site-footer__bottom-item:not(:first-child) {
+  margin-left: 15px;
+}
+
+.site-footer__bottom-img {
+  fill: #fff;
+  transition: fill 0.5s ease;
+}
+
+.site-footer__bottom-img:hover{
+  fill: #fff;
+  opacity: 0.7;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .site-header__button {
+    display: none;
+  }
+
+  .site-header__nav {
+    display: block;
+    background-color: transparent;
+    position: static;
+    top: 0;
+    padding: 0;
+  }
+
+  .site-header__nav-list {
+    display: flex;
+  }
+
+  .site-header__nav-link {
+    color: #33323D;
+    margin-left: 43px;
+    transition: color 0.5s ease;
+  }
+
+  .site-header__nav-link:hover{
+    color: rgba(95, 180, 162, 1);
+  }
+
+  .sitenav {
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    position: static;
+    text-align: center;
+    padding: 40px 63px;
+    max-width: 0;
+    min-height: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .sitenav-list {
+    width: 0;
+    display: flex;
+    white-space: nowrap;
+  }
+
+  .sitenav-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .sitenav-link {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #33323D;
+    margin-right: 43px;
+    transition: color 0.5s ease;
+  }
+
+  .sitenav-link:hover {
+    color: #5FB4A2;
+  }
+
+  .site-hero__content-list {
+    width: 508px;
+    background-color: #fff;
+    position: absolute;
+    top: 541px;
+    padding-top: 56px;
+    padding-right: 56px;
+  }
+
+  .site-hero__content::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 600px;
+    background-image: url("../img/kampyter-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* ABOUT */
+
+  .about-content {
+    display: flex;
+  }
+
+  .about-content::before {
+    content: '';
+    display: block;
+    width: 281px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/people-teblet.png");
+    margin-right: 96px;
+  }
+
+  .about-content__list {
+    max-width: 339px;
+  }
+
+  .about-content__list::after {
+    content: '';
+    display: block;
+    width: 311px;
+    height: 1px;
+    background-color: #33323D;
+    opacity: 0.15;
+    margin-bottom: 50px;
+    margin-top: 39px;
+  }
+
+  .about-content__list-title::before {
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+
+  /* features */
+
+  .features {
+    padding: 0;
+  }
+
+  .features-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .features-content__title {
+    max-width: 350px;
+    position: relative;
+    font-family: 'Ibarra Real Nova', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: -0.357143px;
+    color: #33323D;
+  }
+
+  .features-content__title::before {
+    content: '';
+    position: absolute;
+    width: 113px;
+    height: 1px;
+    background-color: #33323D;
+    opacity: 0.15;
+    left: calc(50% + 224px);
+    top: calc(50%);
+  }
+
+  .features-content__link {
+    height: 0;
+    padding: 17px 34px 27px;
+    margin-top: 17px;
+  }
+
+  /* FOOTER */
+
+  .site-footer {
+    padding: 28px 0;
+  }
+
+  .site-footer__content {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .site-footer__content-img {
+    margin: 0;
+  }
+
+  .site-footer__nav {
+    display: flex;
+    align-items: center;
+    margin-left: 49px;
+    margin-top: -17px;
+  }
+
+  .site-footer__nav-item:not(:last-child) {
+    margin-right: 42px;
+  }
+
+
+
+  .site-footer__bottom {
+    margin: 0;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .about-content::before {
+    content: '';
+    display: block;
+    width: 540px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/people-desktop.png");
+    margin-right: 96px;
+  }
+
+  .site-hero__content-list {
+    width: 508px;
+    background-color: #fff;
+    position: absolute;
+    top: 541px;
+    padding-top: 56px;
+    padding-right: 56px;
+  }
+
+  .about-content::before {
+    content: '';
+    display: block;
+    width: 540px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/people-desktop.png");
+  }
+
+  .about-content__list {
+    max-width: 350px;
+  }
+
+
+
+  /* features */
+
+  .features {
+    margin-top: 150px;
+  }
+
+  .features-content__title::before {
+    content: '';
+    position: absolute;
+    width: 524px;
+    height: 1px;
+    background-color: #33323D;
+    opacity: 0.15;
+    left: calc(50% + 202px);
+    top: calc(50%);
+  }
+}
