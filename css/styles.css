@@ -163,6 +163,11 @@ body {
 
 /* hero */
 
+.site-hero__content-list{
+  display: flex;
+  flex-direction: column;
+}
+
 .site-hero__content::before {
   content: '';
   display: block;
